@@ -1,0 +1,31 @@
+.vignette{
+    width: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+    padding-left: 30px !important;
+}
+.vignette2{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+  padding-left: 20px !important;
+  width: 49%;
+}
+.vignette3{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+  padding-left: 20px !important;
+  width: 100%;
+}
+.vig_tech{
+  float: right;
+}
+.st-gray {
+  background-color: #f1f2f7 !important;
+}
+.contenu{
+  padding:10px;
+}
+.titref{
+  margin-bottom: -7px;
+}
+.titref label{
+  font-weight: bolder;
+  font-size: 12px;
+}
