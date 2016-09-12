@@ -5,7 +5,6 @@ angular.module('portailGP').directive('topresumebar', function () {
     controllerAs: 'topresumebarctrl',
     controller: function ($scope, $stateParams, $reactive) {
       $reactive(this).attach($scope);
-
       this.subscribe('impayeesClient', $stateParams.clientId);
       this.subscribe('notifications', $stateParams.clientId);
       this.subscribe('reclamCliEnCours', $stateParams.clientId);

@@ -1,0 +1,19 @@
+<header class="header" ng-hide="login">
+  <topbar></topbar>
+</header>
+<div class="wrapper row-offcanvas row-offcanvas-left" ng-hide="login">
+  <aside class="left-side sidebar-offcanvas">
+      <leftsidebar></leftsidebar>
+  </aside>
+  <aside class="right-side">
+    <section class="content">
+      <topresumebar></topresumebar>
+      <div class="row">
+          <maincontent></maincontent>
+          <rightnewsbar></rightnewsbar>
+      </div>
+    </section>
+    <footer></footer>
+  </aside>
+</div>
+<login ng-show="login"></login>

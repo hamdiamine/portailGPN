@@ -6,7 +6,6 @@ angular.module('portailGP').directive('footer', function () {
     controller: function ($scope, $stateParams, $reactive) {
       $reactive(this).attach($scope);
 
-
       this.helpers({
 
       });

@@ -7,6 +7,10 @@ angular.module('portailGP')
         url: '/accueil',
         template: '<accueil></accueil>'
       })
+      .state('login', {
+        url: '/login',
+        template: ''
+      })
       .state('fichesynthese', {
         url: '/fichesynthese',
         template: '<fichesynthese></fichesynthese>'
@@ -32,5 +36,5 @@ angular.module('portailGP')
         template: '<historiques></historiques>'
       });
 
-    $urlRouterProvider.otherwise("/");
+    $urlRouterProvider.otherwise("/login");
   });
