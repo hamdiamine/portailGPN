@@ -10,10 +10,12 @@ Meteor.publish("authent", function(ref, mdp){
   return client;
 });
 
+
 Meteor.publish("clientById", function(id){
   return Clients.findOne({_id:id});
 });
 
-Meteor.publish("clients", function(id){
+
+Meteor.publish("clients", function(){
   return Clients.find();
 });
