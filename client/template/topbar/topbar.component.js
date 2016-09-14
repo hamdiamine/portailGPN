@@ -7,14 +7,14 @@ angular.module('portailGP').directive('topbar', function () {
       $reactive(this).attach($scope);
 
       this.helpers({
-
       });
 
       this.deconnexion=()=>{
         $scope.login = true;
+        $scope.compte = undefined;
+        Session.set('client', undefined);
         $state.go('login');
       }
-
     }
   }
 });

@@ -1,7 +1,7 @@
 
 "use strict";
-Meteor.publish("authent", function(refe, mdp){
-  var client = Clients.findOne({reference:refe});
+Meteor.publish("authent", function(ref, mdp){
+  var client = Clients.findOne({reference:ref});
   if(client){
     if(client.mdp !== mdp){
       client.mdp = "";
@@ -10,6 +10,10 @@ Meteor.publish("authent", function(refe, mdp){
   return client;
 });
 
-Meteor.publish("findById", function(id){
+Meteor.publish("clientById", function(id){
   return Clients.findOne({_id:id});
+});
+
+Meteor.publish("clients", function(id){
+  return Clients.find();
 });

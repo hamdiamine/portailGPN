@@ -22,4 +22,6 @@ Meteor.startup(function () {
         });
     });
     */
+
+    //Clients.insert({reference:'01', name:'hkh', mdp:'01'});
 });

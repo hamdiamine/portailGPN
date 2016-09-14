@@ -26,3 +26,5 @@ twbs:bootstrap
 angularui:angular-ui-bootstrap
 natestrauser:font-awesome
 urigo:angular
+chrismbeckett:toastr
+session

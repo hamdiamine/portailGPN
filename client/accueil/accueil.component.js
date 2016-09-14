@@ -6,9 +6,16 @@ angular.module('portailGP').directive('accueil', function () {
     controller: function ($scope, $stateParams, $reactive) {
       $reactive(this).attach($scope);
 
+      var idClient = Session.get('client')._id
+
+      this.subscribe('clients');
+
 
       this.helpers({
-
+        client: () => {
+          var c = Clients.findOne({'_id':idClient});
+          return c;
+        }
       });
 
     }
