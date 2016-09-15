@@ -6,10 +6,16 @@ angular.module('portailGP').directive('fichefacture', function () {
     controller: function ($scope, $stateParams, $reactive) {
       $reactive(this).attach($scope);
 
+      var idFacture = Session.get('idFacture');
+
+      this.subscribe('factures');
+
       $scope.pageName = 'Fihe facture';
 
       this.helpers({
-
+        facture:()=>{
+          return Factures.findOne({'id':idFacture});
+        }
       });
 
     }

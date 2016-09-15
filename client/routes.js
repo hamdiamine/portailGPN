@@ -34,6 +34,22 @@ angular.module('portailGP')
       .state('historiques', {
         url: '/historiques',
         template: '<historiques></historiques>'
+      })
+      .state('impayees', {
+        url: '/impayees',
+        template: '<impayees></impayees>'
+      })
+      .state('notifications', {
+        url: '/notifications',
+        template: '<notifications></notifications>'
+      })
+      .state('reclamationannul', {
+        url: '/reclamationannul',
+        template: '<reclamationannul></reclamationannul>'
+      })
+      .state('reclamationencours', {
+        url: '/reclamationencours',
+        template: '<reclamationencours></reclamationencours>'
       });
 
     $urlRouterProvider.otherwise("/login");

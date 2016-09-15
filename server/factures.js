@@ -27,3 +27,7 @@ Meteor.publish("facturesAbn", function(abn){
 Meteor.publish("findOne", function(id){
   return Factures.findOne({_id:id});
 });
+
+Meteor.publish("factures", function(){
+  return Factures.find();
+});

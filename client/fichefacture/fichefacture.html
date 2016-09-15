@@ -7,7 +7,7 @@
             <label>Numéro facture</label>
           </div>
           <div class="row">
-            <span>2016-001</span>
+            <span>{{fichefacturectrl.facture.reference}}</span>
           </div>
         </div>
         <div class="col-md-6 form-group">
@@ -15,7 +15,7 @@
             <label>Type</label>
           </div>
           <div class="row">
-            <span>Facture de consommation cyclique</span>
+            <span>{{fichefacturectrl.facture.type}}</span>
           </div>
         </div>
       </div>
@@ -25,7 +25,7 @@
             <label>Payeur</label>
           </div>
           <div class="row">
-            <span>Mr. Hamdi Amine ELKHALDI</span>
+            <span>{{fichefacturectrl.facture.namePayeur}}</span>
           </div>
         </div>
         <div class="col-md-6 form-group">
@@ -33,7 +33,7 @@
             <label>Adresse paiement</label>
           </div>
           <div class="row">
-            <span>14 rue 6256 OMRAN SUPERIEUR TUNIS</span>
+            <span>{{fichefacturectrl.facture.adressPai}}</span>
           </div>
         </div>
       </div>
@@ -43,7 +43,7 @@
             <label>Date de calcul</label>
           </div>
           <div class="row">
-            <span>14/05/2016</span>
+            <span>{{fichefacturectrl.facture.dateCalc}}</span>
           </div>
         </div>
         <div class="col-md-4 form-group">
@@ -51,7 +51,7 @@
             <label>Date d'officialisation</label>
           </div>
           <div class="row">
-            <span>14/05/2016</span>
+            <span>{{fichefacturectrl.facture.dateOff}}</span>
           </div>
         </div>
         <div class="col-md-4 form-group">
@@ -59,23 +59,23 @@
             <label>Date d'éxigibilité</label>
           </div>
           <div class="row">
-            <span>14/06/2016</span>
+            <span>{{fichefacturectrl.facture.dateExig}}</span>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-md-4 form-group">
-          <div class="row">
+          <div class="row" ng-show="fichefacturectrl.facture.reglement">
             <a href>Détails règlement</a>
           </div>
         </div>
         <div class="col-md-4 form-group">
-          <div class="row">
+          <div class="row" ng-show="fichefacturectrl.facture.echeancier">
             <a href>Détails echéancier</a>
           </div>
         </div>
         <div class="col-md-4 form-group">
-          <div class="row">
+          <div class="row" ng-show="fichefacturectrl.facture.relance">
             <a href>Détails relance</a>
           </div>
         </div>
@@ -90,7 +90,7 @@
             <label>Montant HT</label>
           </div>
           <div class="row">
-            <span>32.640</span>
+            <span>{{fichefacturectrl.facture.mntHT}}</span>
           </div>
         </div>
       </div>
@@ -104,7 +104,7 @@
             <label>Montant TVA</label>
           </div>
           <div class="row">
-            <span>5.440</span>
+            <span>{{fichefacturectrl.facture.mntTVA}}</span>
           </div>
         </div>
       </div>
@@ -118,7 +118,7 @@
             <label>Montant TTC</label>
           </div>
           <div class="row">
-            <span>38.000</span>
+            <span>{{fichefacturectrl.facture.mntTTC}}</span>
           </div>
         </div>
       </div>
@@ -132,11 +132,11 @@
             <label>Restant dû</label>
           </div>
           <div class="row">
-            <span>38.000</span>
+            <span>{{fichefacturectrl.facture.mntRST}}</span>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row" ng-show="fichefacturectrl.facture.lignes">
         <div class="col-md-12 form-group">
           <div class="row titref">
             <label>Liste des articles</label>
@@ -146,32 +146,20 @@
               <tr class="success">
                   <th>N°</th>
                   <th>Article</th>
-                  <th>Cadran</th>
-                  <th>Quantité</th>
+                  <th>Quantité facturée</th>
                   <th>Prix unitaire</th>
                   <th>Mnt HT</th>
                   <th>Mnt TVA</th>
                   <th>Mnt TTC</th>
               </tr>
-              <tr>
-                  <td>1</td>
-                  <td>Consommation</td>
-                  <td>EAU</td>
-                  <td>20 m3</td>
-                  <td>0.100</td>
-                  <td>2.000</td>
-                  <td>0.500</td>
-                  <td>2.500</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Frais fixe</td>
-                <td></td>
-                <td>1</td>
-                <td>4.400</td>
-                <td>4.400</td>
-                <td>1</td>
-                <td>5.400</td>
+              <tr ng-repeat="ligne in fichefacturectrl.facture.lignes">
+                  <td>{{ligne.numero}}</td>
+                  <td>{{ligne.article}}</td>
+                  <td>{{ligne.qteFact}}</td>
+                  <td>{{ligne.prixUnt}}</td>
+                  <td>{{ligne.mntHT}}</td>
+                  <td>{{ligne.mntTVA}}</td>
+                  <td>{{ligne.mntTTC}}</td>
               </tr>
              </table>
           </div>

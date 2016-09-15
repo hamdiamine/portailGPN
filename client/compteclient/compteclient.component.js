@@ -5,10 +5,22 @@ angular.module('portailGP').directive('compteclient', function () {
     controllerAs: 'compteclientctrl',
     controller: function ($scope, $stateParams, $reactive) {
       $reactive(this).attach($scope);
-      $scope.pageName = 'Compte client';
+
+      var idClient = Session.get("idClient");
+      if(!idClient||idClient===null){
+        $state.go('accueil');
+      }
+
+      this.subscribe('comptes');
+      this.subscribe('lignecomptes');
 
       this.helpers({
-
+        comptes:()=>{
+          return Comptes.find({'idClient':idClient});
+        },
+        lignes:()=>{
+          return LigneComptes.find({'idClient':idClient});
+        }
       });
 
     }

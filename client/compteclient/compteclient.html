@@ -1,1 +1,43 @@
-compte client
+<div class="row">
+  <div class="col-md-6">
+    <table class="table table-hover">
+      <tr class="success">
+        <th><input type="checkbox" value></th>
+        <th>Compte/PDS</th>
+        <th>Solde PDS</th>
+      </tr>
+      <tr ng-repeat="compte in compteclientctrl.comptes">
+        <td>
+          <div class="checkbox">
+              <input type="checkbox" value>
+          </div>
+        </td>
+        <td>{{compte.PDS}}</td>
+        <td>{{compte.solde}}</td>
+      </tr>
+     </table>
+  </div>
+  <div class="col-md-6">
+  </div>
+</div>
+<h5>Détails comptes</h5>
+<div class="row">
+  <table class="table table-hover">
+    <tr class="success">
+      <th>Date</th>
+      <th>Reférence</th>
+      <th>Type</th>
+      <th>Débit</th>
+      <th>crédit</th>
+      <th>Cumul.</th>
+    </tr>
+    <tr ng-repeat="compte in compteclientctrl.lignes">
+      <td>{{ligne.date}}</td>
+      <td>{{ligne.reference}}</td>
+      <td>{{ligne.type}}</td>
+      <td>{{ligne.debit}}</td>
+      <td>{{ligne.credit}}</td>
+      <td>{{ligne.cumul}}</td>
+    </tr>
+   </table>
+</div>

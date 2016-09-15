@@ -4,5 +4,9 @@ Meteor.publish("relevesByPDC", function(pdc, options){
     pdc:pdc
   };
   Counts.publish(this,"relevesByPDCCount", Releves.find(selector), {noReady:true});
-  Releves.find(selector, options);
+  return Releves.find(selector, options);
+});
+
+Meteor.publish("releves", function(){
+  return Releves.find();
 });
