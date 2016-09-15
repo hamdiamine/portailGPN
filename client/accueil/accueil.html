@@ -24,13 +24,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-          <td><a href="/fichesynthese">201202535874</a></td>
-          <td>32 rue 6289 ALENTILAKA TUNIS</td>
-          <td><center><span class="label label-success">X</span></center></td>
-          <td><center><span class="label label-success">X</span></center></td>
-          <td><center><span class="label label-danger">X</span></center></td>
-          <td></td>
+      <tr ng-repeat="role in accueilctrl.listRoleClient">
+          <td><a href ng-click="accueilctrl.ficheSynthese($index)">{{role.refPdl}}</a></td>
+          <td>{{role.adressPdl}}</td>
+          <td><center ng-hide="role.prop=='-1'"><span ng-class="{'label label-success':role.prop=='1', 'label label-danger':role.prop=='0'}">X</span></center></td>
+          <td><center ng-hide="role.abonne=='-1'"><span ng-class="{'label label-success':role.abonne=='1', 'label label-danger':role.abonne=='0'}">X</span></center></td>
+          <td><center ng-hide="role.payeur=='-1'"><span ng-class="{'label label-success':role.payeur=='1', 'label label-danger':role.payeur=='0'}">X</span></center></td>
+          <td><center ng-hide="role.autres=='-1'"><span ng-class="{'label label-success':role.autres=='1', 'label label-danger':role.autres=='0'}">X</span></center></td>
       </tr>
     </tbody>
   </table>

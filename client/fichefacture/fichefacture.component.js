@@ -6,6 +6,7 @@ angular.module('portailGP').directive('fichefacture', function () {
     controller: function ($scope, $stateParams, $reactive) {
       $reactive(this).attach($scope);
 
+      $scope.pageName = 'Fihe facture';
 
       this.helpers({
 

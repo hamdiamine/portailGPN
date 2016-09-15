@@ -6,7 +6,6 @@ angular.module('portailGP').directive('histoabonnes', function () {
     controller: function ($scope, $stateParams, $reactive) {
       $reactive(this).attach($scope);
 
-
       this.helpers({
 
       });

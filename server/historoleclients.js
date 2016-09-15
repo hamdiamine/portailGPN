@@ -1,8 +1,12 @@
 "use strict";
 Meteor.publish("listRoleClient", function(client){
-  let selector = {
-    client: client
+  const selector = {
+    idClient: client
   };
   Counts.publish(this, 'listRoleClientCount', HistoRoleClients.find(selector), {noReady: true});
-  return HistoRoleClients.find(selector, options);
+  return HistoRoleClients.find(selector);
+});
+
+Meteor.publish("histoRoleClients", function(){
+  return HistoRoleClients.find();
 });

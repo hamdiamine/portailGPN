@@ -8,7 +8,7 @@
             <label>N° contrat</label>
           </div>
           <div class="row">
-            <span>2004586</span>
+            <span>{{fichesynthesectrl.abn.reference}}</span>
           </div>
         </div>
         <div class="col-md-6 form-group">
@@ -16,7 +16,7 @@
             <label>Solde contrat</label>
           </div>
           <div class="row">
-            <a href>650 DT</a>
+            <a href>{{fichesynthesectrl.abn.soldeAbn}}</a>
           </div>
         </div>
       </div>
@@ -26,7 +26,7 @@
             <label>Abonné</label>
           </div>
           <div class="row">
-            <span>Mr. Hamdi Amine ELKHALDI</span>
+            <span>{{fichesynthesectrl.abn.nameAbonne}}</span>
           </div>
         </div>
       </div>
@@ -36,7 +36,7 @@
             <label>Payeur</label>
           </div>
           <div class="row">
-            <span>Mr. Hamdi Amine ELKHALDI</span>
+            <span>{{fichesynthesectrl.abn.namePayeur}}</span>
           </div>
         </div>
       </div>
@@ -46,7 +46,7 @@
             <label>Date début</label>
           </div>
           <div class="row">
-            <span>01/04/2016</span>
+            <span>{{fichesynthesectrl.abn.dateDebut}}</span>
           </div>
         </div>
         <div class="col-md-6 form-group">
@@ -54,7 +54,7 @@
             <label>Date fin</label>
           </div>
           <div class="row">
-            <span>--/--/----</span>
+            <span>{{fichesynthesectrl.abn.dataFin}}</span>
           </div>
         </div>
       </div>
@@ -64,7 +64,7 @@
             <label>Groupe de fact.</label>
           </div>
           <div class="row">
-            <span>2011</span>
+            <span>{{fichesynthesectrl.abn.groupeFact}}</span>
           </div>
         </div>
         <div class="col-md-6 form-group">
@@ -72,7 +72,7 @@
             <label>Offre type</label>
           </div>
           <div class="row">
-            <span>Offre domestique</span>
+            <span>{{fichesynthesectrl.abn.offreType}}</span>
           </div>
         </div>
       </div>
@@ -82,7 +82,7 @@
             <label>Dernière fact.</label>
           </div>
           <div class="row">
-            <span>15/02/2015</span>
+            <span>{{fichesynthesectrl.abn.dateDerFact}}</span>
           </div>
         </div>
         <div class="col-md-6 form-group">
@@ -90,7 +90,7 @@
             <label>Prochain fact.</label>
           </div>
           <div class="row">
-            <span>15/05/2015</span>
+            <span>{{fichesynthesectrl.abn.dateProchFact}}</span>
           </div>
         </div>
       </div>
@@ -100,7 +100,7 @@
             <label>Mode paie.</label>
           </div>
           <div class="row">
-            <a href>Domicilier</a>
+            <a href>{{fichesynthesectrl.abn.ModPaie}}</a>
           </div>
         </div>
         <div class="col-md-6 form-group">
@@ -108,7 +108,7 @@
             <label>Etape relance</label>
           </div>
           <div class="row">
-            <span>---------</span>
+            <span>{{fichesynthesectrl.abn.etapRelance}}</span>
           </div>
         </div>
       </div>
@@ -123,17 +123,9 @@
                   <th>Label</th>
                   <th>Valeur</th>
               </tr>
-              <tr>
-                  <td>Volume des eaux non conventionnels</td>
-                  <td>50 m3</td>
-              </tr>
-              <tr>
-                  <td>Coefficient de pollution</td>
-                  <td>1,5</td>
-              </tr>
-              <tr>
-                  <td>Nombre d'appartement</td>
-                  <td>5</td>
+              <tr ng-repeat="eng in fichesynthesectrl.abn.listEng">
+                  <td>{{eng.name}}</td>
+                  <td>{{eng.valeur}}</td>
               </tr>
              </table>
           </div>
@@ -150,7 +142,7 @@
             <label>N° branchement</label>
           </div>
           <div class="row">
-            <span>2004586252547</span>
+            <span>{{fichesynthesectrl.pdl.reference}}</span>
           </div>
         </div>
         <div class="col-md-6 form-group">
@@ -158,7 +150,7 @@
             <label>Etat branch.</label>
           </div>
           <div class="row">
-            <span>Ouvert le 01/01/2016</span>
+            <span>{{fichesynthesectrl.pdl.etat}}</span>
           </div>
         </div>
       </div>
@@ -168,7 +160,7 @@
             <label>N° compteur</label>
           </div>
           <div class="row">
-            <span>54120001245</span>
+            <span>{{fichesynthesectrl.pdl.compteur}}</span>
           </div>
         </div>
         <div class="col-md-6 form-group">
@@ -176,7 +168,7 @@
             <label>Etat compteur</label>
           </div>
           <div class="row">
-            <span>Posé le 01/01/2014</span>
+            <span>{{fichesynthesectrl.pdl.etatCpt}}</span>
           </div>
         </div>
       </div>
@@ -186,7 +178,7 @@
             <label>Tournée</label>
           </div>
           <div class="row">
-            <span>452</span>
+            <span>{{fichesynthesectrl.pdl.tournee}}</span>
           </div>
         </div>
         <div class="col-md-6 form-group">
@@ -194,7 +186,7 @@
             <label>Ordre</label>
           </div>
           <div class="row">
-            <span>210</span>
+            <span>{{fichesynthesectrl.pdl.ordre}}</span>
           </div>
         </div>
       </div>
@@ -204,7 +196,7 @@
             <label>Difficulté rel.</label>
           </div>
           <div class="row">
-            <span>Présence d'un chien</span>
+            <span>{{fichesynthesectrl.pdl.diffReleve}}</span>
           </div>
         </div>
         <div class="col-md-6 form-group">
@@ -212,7 +204,7 @@
             <label>Prochain rel.</label>
           </div>
           <div class="row">
-            <span>07/05/2015</span>
+            <span>{{fichesynthesectrl.pdl.dateProchReleve}}</span>
           </div>
         </div>
       </div>
@@ -281,17 +273,9 @@
                   <th>Type secteur</th>
                   <th>Secteur</th>
               </tr>
-              <tr>
-                  <td>District</td>
-                  <td>20</td>
-              </tr>
-              <tr>
-                  <td>Gouvernorat</td>
-                  <td>Tunis</td>
-              </tr>
-              <tr>
-                  <td>Loalité</td>
-                  <td>Localité 1</td>
+              <tr ng-repeat="sect in fichesynthesectrl.pdl.listSecteur">
+                  <td>{{sect.type}}</td>
+                  <td>{{sect.valeur}}</td>
               </tr>
              </table>
           </div>

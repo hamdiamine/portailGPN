@@ -1,7 +1,11 @@
+"use strict";
 Meteor.publish("abnByPDC", function(pdc){
-  "use strict";
-  let selector={
+  const selector={
     pdc : pdc
   };
   return Abonnements.findOne(selector);
+});
+
+Meteor.publish("abonnements", function(){
+  return Abonnements.find();
 });

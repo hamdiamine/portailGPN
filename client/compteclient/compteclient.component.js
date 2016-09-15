@@ -5,7 +5,7 @@ angular.module('portailGP').directive('compteclient', function () {
     controllerAs: 'compteclientctrl',
     controller: function ($scope, $stateParams, $reactive) {
       $reactive(this).attach($scope);
-
+      $scope.pageName = 'Compte client';
 
       this.helpers({
 

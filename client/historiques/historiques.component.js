@@ -6,6 +6,7 @@ angular.module('portailGP').directive('historiques', function () {
     controller: function ($scope, $stateParams, $reactive) {
       $reactive(this).attach($scope);
 
+      $scope.pageName = 'Historiques';
 
       this.helpers({
 
