@@ -6,7 +6,7 @@ angular.module('portailGP').directive('compteclient', function () {
     controller: function ($scope, $stateParams, $reactive) {
       $reactive(this).attach($scope);
 
-      var idClient = Session.get('client').id;
+      var idClient = Session.get("idClient");
       if(!idClient||idClient===null){
         $state.go('accueil');
       }
@@ -22,12 +22,6 @@ angular.module('portailGP').directive('compteclient', function () {
           return LigneComptes.find({'idClient':idClient});
         }
       });
-
-      this.ficheFacture=($index)=>{
-        var idFacture = this.lignes[$index].idFacture;
-        Session.set('idFacture', idFacture);
-        $state.go('fichefacture');
-      }
 
     }
   }

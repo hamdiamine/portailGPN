@@ -7,9 +7,6 @@ angular.module('portailGP').directive('fichefacture', function () {
       $reactive(this).attach($scope);
 
       var idFacture = Session.get('idFacture');
-      if(!idFacture||idFacture===null){
-        $state.go('accueil');
-      }
 
       this.subscribe('factures');
 
