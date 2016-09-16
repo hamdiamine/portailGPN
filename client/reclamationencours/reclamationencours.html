@@ -1,1 +1,20 @@
-reclam en cours
+<div class="row">
+  <table class="table table-hover">
+    <tr class="success">
+      <th>Numéro</th>
+      <th>Objet</th>
+      <th>Date</th>
+      <th>Etape en cours</th>
+      <th>Rendez-vous</th>
+      <th>Commentaire</th>
+    </tr>
+    <tr ng-repeat="reclam in reclamationencoursctrl.reclams">
+      <td>{{reclam.numero}}</td>
+      <td>{{reclam.objet}}</td>
+      <td>{{reclam.date}}</td>
+      <td>{{reclam.etape}}</td>
+      <td>{{reclam.rendezvous}}</td>
+      <td>{{reclam.commentaire}}</td>
+    </tr>
+   </table>
+</div>

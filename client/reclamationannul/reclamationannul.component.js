@@ -6,8 +6,17 @@ angular.module('portailGP').directive('reclamationannul', function () {
     controller: function ($scope, $stateParams, $reactive) {
       $reactive(this).attach($scope);
 
-      this.helpers({
+      var idClient = Session.get('client').id;
+      if(!idClient||idClient===null){
+        $state.go('accueil');
+      }
 
+      this.subscribe('reclamations');
+
+      this.helpers({
+        reclams:()=>{
+          return HistoReclamations.find({'idClient':idClient,'etat':'-1'})
+        }
       });
 
     }

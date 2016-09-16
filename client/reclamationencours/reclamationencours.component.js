@@ -3,11 +3,20 @@ angular.module('portailGP').directive('reclamationencours', function () {
     restrict: 'E',
     templateUrl: 'client/reclamationencours/reclamationencours.html',
     controllerAs: 'reclamationencoursctrl',
-    controller: function ($scope, $stateParams, $reactive) {
+    controller: function ($scope, $stateParams, $reactive, $state) {
       $reactive(this).attach($scope);
 
-      this.helpers({
+      var idClient = Session.get('client').id;
+      if(!idClient||idClient===null){
+        $state.go('accueil');
+      }
 
+      this.subscribe('reclamations');
+
+      this.helpers({
+        reclams:()=>{
+          return HistoReclamations.find({'idClient':idClient,'etat':'1'})
+        }
       });
 
     }

@@ -1,1 +1,18 @@
-reclam annul
+<div class="row">
+  <table class="table table-hover">
+    <tr class="success">
+      <th>Numéro</th>
+      <th>Objet</th>
+      <th>Date</th>
+      <th>Rasison</th>
+      <th>Commentaire</th>
+    </tr>
+    <tr ng-repeat="reclam in reclamationannulctrl.reclams">
+      <td>{{reclam.numero}}</td>
+      <td>{{reclam.objet}}</td>
+      <td>{{reclam.date}}</td>
+      <td>{{reclam.raison}}</td>
+      <td>{{reclam.commentaire}}</td>
+    </tr>
+   </table>
+</div>

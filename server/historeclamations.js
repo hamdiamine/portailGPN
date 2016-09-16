@@ -24,3 +24,7 @@ Meteor.publish("reclamCliAnnul", function(client){
   Counts.publish(this, 'reclamCliAnnulCount', HistoReclamations.find(selector));
   return HistoReclamations.find(selector);
 });
+
+Meteor.publish("reclamations", function(){
+  return HistoReclamations.find();
+});
