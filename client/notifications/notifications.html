@@ -1,1 +1,17 @@
-notif
+<div class="row">
+  <table class="table table-hover">
+    <tr class="success">
+      <th>Message</th>
+      <th>Date</th>
+      <th>Num demande</th>
+      <th>Télécharger</th>
+      <th>Lu</th>
+    </tr>
+    <tr ng-repeat="notif in notificationsctrl.notifs">
+      <td>{{notif.message}}</td>
+      <td>{{notif.date}}</td>
+      <td><a ng-href="{{notif.doc}}"></a>{{notif.doc}}</td>
+      <td><input type="checkbox" value></td>
+    </tr>
+   </table>
+</div>

@@ -1,1 +1,18 @@
-impyees
+<div class="row">
+  <table class="table table-hover">
+    <tr class="success">
+      <th>Date</th>
+      <th>Référence</th>
+      <th>Montant TTC</th>
+      <th>Montant restant dû</th>
+      <th>Sélectionner</th>
+    </tr>
+    <tr ng-repeat="impayee in impayeesctrl.impayees">
+      <td>{{impayee.dateOff}}</td>
+      <td><a href ng-click="ficheFacture($index)">{{impayee.reference}}</a></td>
+      <td>{{impayee.mntTTC}}</td>
+      <td>{{impayee.mntRST}}</td>
+      <td><input type="checkbox" value></td>
+    </tr>
+   </table>
+</div>
