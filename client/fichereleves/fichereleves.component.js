@@ -22,7 +22,7 @@ angular.module('portailGP').directive('fichereleves', function () {
       });
 
       this.ficheFacture=($index)=>{
-        idFacture = this.releves[$index].idFacture;
+        var idFacture = this.releves[$index].idFacture;
         Session.set('idFacture', idFacture);
         $state.go('fichefacture');
       }

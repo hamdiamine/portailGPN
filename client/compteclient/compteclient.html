@@ -33,7 +33,7 @@
     </tr>
     <tr ng-repeat="compte in compteclientctrl.lignes">
       <td>{{ligne.date}}</td>
-      <td>{{ligne.reference}}</td>
+      <td><a href ng-click="ficheFacture($index)">{{ligne.reference}}</a></td>
       <td>{{ligne.type}}</td>
       <td>{{ligne.debit}}</td>
       <td>{{ligne.credit}}</td>
