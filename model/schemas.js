@@ -63,6 +63,8 @@ ComptesSchema = new SimpleSchema({
   createdAt:{type:Date, autoValue:function(){return new Date()}}
 });
 
+//
+
 LignesFacturesSchema = new SimpleSchema({
   idFacture:{type:Number},
   numero:{type:Number},
