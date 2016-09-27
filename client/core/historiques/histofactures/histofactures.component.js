@@ -5,7 +5,7 @@ angular.module('portailGP').directive('histofactures', function () {
     controllerAs: 'histofacturesctrl',
     controller: function ($scope, $stateParams, $reactive) {
       $reactive(this).attach($scope);
-
+      
 
       this.helpers({
 

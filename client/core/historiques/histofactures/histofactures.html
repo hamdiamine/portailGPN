@@ -1,1 +1,18 @@
-facture
+<div class="row">
+  <table class="table table-hover">
+    <tr class="mydefault">
+      <th>Date</th>
+      <th>Référence</th>
+      <th>Type</th>
+      <th>Montant TTC</th>
+      <th>Restant dû</th>
+    </tr>
+    <tr ng-repeat="facture in histofacturesctrl.factures">
+      <td>{{facture.dateOff}}</td>
+      <td>{{facture.reference}}</td>
+      <td>{{facture.type}}</td>
+      <td>{{facture.mntTTC}}</td>
+      <td>{{facture.mntRSTDU}}</td>
+    </tr>
+   </table>
+</div>

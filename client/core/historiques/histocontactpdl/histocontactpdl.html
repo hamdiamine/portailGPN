@@ -1,1 +1,16 @@
-
+<div class="row">
+  <table class="table table-hover">
+    <tr class="mydefault">
+      <th>Client</th>
+      <th>Role</th>
+      <th>Date début</th>
+      <th>Date fin</th>
+    </tr>
+    <tr ng-repeat="contact in histocontactpdlctrl.contacts">
+      <td>{{contact.name}}</td>
+      <td>{{contact.role}}</td>
+      <td>{{contact.datedebut}}</td>
+      <td>{{contact.datefin}}</td>
+    </tr>
+   </table>
+</div>

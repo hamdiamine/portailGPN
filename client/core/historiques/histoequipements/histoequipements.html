@@ -1,1 +1,24 @@
-equipement
+<div class="row">
+  <table class="table table-hover">
+    <tr class="mydefault">
+      <th>Type</th>
+      <th>Numéro</th>
+      <th>Date pose</th>
+      <th>Raison pose</th>
+      <th>Agent pose</th>
+      <th>Date dépose</th>
+      <th>Raison dépose</th>
+      <th>Agent dépose</th>
+    </tr>
+    <tr ng-repeat="histoequip in histoequipementsctrl.histoequips">
+      <td>{{histoequip.type}}</td>
+      <td>{{histoequip.numero}}</td>
+      <td>{{histoequip.datepose}}</td>
+      <td>{{histoequip.raispose}}</td>
+      <td>{{histoequip.agepose}}</td>
+      <td>{{histoequip.datedepose}}</td>
+      <td>{{histoequip.raisdepose}}</td>
+      <td>{{histoequip.agedepose}}</td>
+    </tr>
+   </table>
+</div>
